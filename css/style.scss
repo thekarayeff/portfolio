@@ -1,0 +1,299 @@
+@mixin breakpoint($point) {
+    @if $point ==small {
+        @media (min-width:300px) {
+            @content;
+        }
+    }
+
+    @else if $point ==smallx {
+        @media (min-width:468px) {
+            @content;
+        }
+    }
+
+    @else if $point ==medium {
+        @media (min-width:768px) {
+            @content;
+        }
+    }
+
+    @else if $point ==large {
+        @media (min-width:992px) {
+            @content;
+        }
+    }
+
+    @else if $point ==Xlarge {
+        @media (min-width:1200px) {
+            @content;
+        }
+    }
+}
+@import url('https://fonts.cdnfonts.com/css/conthrax');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Yuji+Mai&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+    list-style: none !important;
+    box-sizing: border-box;
+    font-family: Afacad Flux, sans-serif;
+}
+
+body{
+    background: #070a29;
+    color: white;
+}
+// Header part
+#headers{
+    z-index: 1001;
+    position: fixed;
+    width: 100%;
+    background-color: #070a29;
+}
+.header_boxes{
+    @include breakpoint(large){
+        display: flex;  
+        justify-content: space-between; 
+        align-items: center;
+    }
+}
+.header_box{
+    @include breakpoint(small){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.head_img{
+    width: 100px;
+    height: 100px;
+    img{
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+}
+.desktop{
+    @include breakpoint(small){
+        display: none;
+    }
+    @include breakpoint(large){
+        display: block;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+        
+        li{
+            transition: .7s;
+        }
+        a{
+            color: #fff;
+            transition: .7s;
+        }
+    }
+}
+.desktop li:last-child{
+    background: slateblue;
+    padding: 5px;
+}
+.mobile{
+    @include breakpoint(small){
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(150%);
+    }
+    @include breakpoint(large){
+        display: none;
+    }
+    li{
+    padding: 30px;
+    text-align: center;
+    a{
+        color: white;
+        font-size: 30px;
+    }
+    }
+    .close{
+        text-align: end;
+        span{
+            background-color: slateblue;
+            padding: 10px;
+            border-radius: 40px;
+            font-size: 30px;
+            font-family: sans-serif;
+        }
+    }
+}
+.bars{
+    @include breakpoint(small){
+        display: block;
+        font-size: 35px;
+    }
+    @include breakpoint(large){
+        display: none;
+    }
+}
+.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    margin: 0;
+    padding: 0;
+    transition: .6s;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #070a29;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mobile li:last-child{
+    background-color: slateblue;
+    border-radius: 50px;
+}
+nav{
+@include breakpoint(small){
+    width: 0;
+height: 0;
+}
+@include breakpoint(large){
+    width: 100%;
+    height: 100%;
+}
+}
+.desktop li:last-child:hover{
+    background-color: transparent;
+}
+.desktop li:last-child:hover a{
+    color: yellow;
+}
+// Esas Swiper
+.esas_swip{
+    padding-block: 80px 0;
+}
+.swiper-slide{
+    
+ .image{
+    display: flex;
+    position: relative;
+    height: 88vh;
+    width: 100%;
+    img{
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 16 / 9;
+    }
+ }
+}
+// Calculator
+#calc{
+    background: url('/img/9yugvn57e5o81.gif');
+    background-size: cover; /* Şəkilin ekranı tam doldurması üçün */
+    background-position: center center; /* Şəkilin mərkəzə yerləşdirilməsi */
+    background-repeat: no-repeat; /* Şəkilin təkrarlanmaması */
+  @include breakpoint(small){
+    padding-block: 80px 0;
+  }
+  input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 20px;
+    font-weight: 500;
+    color: #182bff;
+  }
+  select{
+    border: none;
+    outline: none;
+    color: #182bff;
+    border-radius: 10px;
+    font-weight: 700;
+  }
+  h3{
+    font-size: 35px;
+    text-decoration: underline !important;
+  }
+}
+
+
+// foot
+#foots{
+    background-color: #070a29;
+    background-size: cover; /* Şəkilin ekranı tam doldurması üçün */
+    background-position: center bottom; /* Şəkilin mərkəzə yerləşdirilməsi */
+    background-repeat: no-repeat; /* Şəkilin təkrarlanmaması */
+}
+.foot_box{
+    display: flex;
+    justify-content: space-between;
+    .f_content{
+        display: flex;
+      align-items: center;
+      p{
+        margin: 0;
+      }
+    }
+}
+.main_img{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#myPortfolio{
+    padding-block: 60px;
+}
+.portfolio_box{
+    display: flex;
+    @include breakpoint(small){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.main_img::after{
+    content: '';
+    background-image: url('/img/Gradient.png');
+    background-size: cover; /* Şəkilin ekranı tam doldurması üçün */
+    background-position: center bottom; /* Şəkilin mərkəzə yerləşdirilməsi */
+    background-repeat: no-repeat; /* Şəkilin təkrarlanmaması */
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.daire{
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 5px;
+    color: #7127BA;
+}
+.main_context{
+    font-size: 30px;
+    p{
+        margin: 0;
+        text-align: center;
+    }
+}
+.main_context p:first-child{
+    font-size: 18px;
+    span{
+        text-decoration: underline !important;
+        color: yellow;
+    }
+}
