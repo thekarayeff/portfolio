@@ -185,7 +185,7 @@ body {
 }
 
 #calc {
-  background: url("/img/9yugvn57e5o81.gif");
+  background: url("./img/9yugvn57e5o81.gif");
   background-size: cover; /* Şəkilin ekranı tam doldurması üçün */
   background-position: center center; /* Şəkilin mərkəzə yerləşdirilməsi */
   background-repeat: no-repeat; /* Şəkilin təkrarlanmaması */
