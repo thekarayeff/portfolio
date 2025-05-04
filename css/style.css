@@ -185,7 +185,7 @@ body {
 }
 
 #calc {
-    background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fhdqwalls.com%2Fpower-lines-moon-anime-quite-night-4k-wallpaper&psig=AOvVaw3aRYspKrVXGHqyrckwol6V&ust=1746404165686000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKCP7u3EiI0DFQAAAAAdAAAAABAE');
+  background: url("img/sky1.gif");
   background-size: cover; /* Şəkilin ekranı tam doldurması üçün */
   background-position: center center; /* Şəkilin mərkəzə yerləşdirilməsi */
   background-repeat: no-repeat; /* Şəkilin təkrarlanmaması */
