@@ -198,7 +198,7 @@ height: 0;
 }
 // Calculator
 #calc{
-    background: url('/img/9yugvn57e5o81.gif');
+    background: url('img/9yugvn57e5o81.gif');
     background-size: cover; /* Şəkilin ekranı tam doldurması üçün */
     background-position: center center; /* Şəkilin mərkəzə yerləşdirilməsi */
     background-repeat: no-repeat; /* Şəkilin təkrarlanmaması */
@@ -265,7 +265,7 @@ height: 0;
 }
 .main_img::after{
     content: '';
-    background-image: url('/img/Gradient.png');
+    background-image: url('img/Gradient.png');
     background-size: cover; /* Şəkilin ekranı tam doldurması üçün */
     background-position: center bottom; /* Şəkilin mərkəzə yerləşdirilməsi */
     background-repeat: no-repeat; /* Şəkilin təkrarlanmaması */
